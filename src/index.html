@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Picker</title>
+</head>
+<body>
+    
+    <!-- Without default values -->
+    <time-picker></time-picker>
+    
+    <hr>
+
+    <!-- With default values -->
+    <time-picker hour="12" minute="30"></time-picker>
+
+    <script src="time-picker.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('time-picker').forEach((picker) => {
+                picker.addEventListener('time-selected', (event) => {
+                    console.log('Selected time:', event.detail);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
